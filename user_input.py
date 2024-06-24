@@ -20,12 +20,14 @@ def input_limits():
             pass
 
 
-def input_guess(lives, num):
+def input_guess(lives, num, lowl, upl):
     chances = lives
     while lives > 0:
         try:
             #Ask for guess
             guess = int(input('Your Guess: ').strip())
+            if guess > upl or guess < lowl:
+                print('The limits were asked for a reason 🙄')
             if guess == num:
                 print('YAY you guessed it !!!')
                 print(f'You took {int(chances - lives + 1)} chances')
@@ -42,4 +44,4 @@ def input_guess(lives, num):
             print('Please type a valid input!!')
             pass
     if lives == 0:
-        print(f'☹️ The number was {num} \nGAME OVER')
+        print(f'🙁 The number was {num} \nGAME OVER')
