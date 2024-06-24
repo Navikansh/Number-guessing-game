@@ -11,7 +11,7 @@ def main():
    print(f'You have {lives} chances')
 
    #Generate num between given limits
-   user_input.input_guess(lives, numGenerator.num_generator(lowl, upl))
+   user_input.input_guess(lives, numGenerator.num_generator(lowl, upl), lowl, upl)
    
 if __name__ == '__main__':
    main()
