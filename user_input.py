@@ -7,6 +7,7 @@ def input_limits():
 
             #Ask for upper limit
             upper_limit = int(input('What\'s the upper limit ? ').strip())
+
             if lower_limit > upper_limit:
                 print('Upper limit is supposed to be greater than lower limit !!! \nTry again')
                 continue
@@ -41,5 +42,4 @@ def input_guess(lives, num):
             print('Please type a valid input!!')
             pass
     if lives == 0:
-        print(f'☹️ The number was {num}')
-        print('GAME OVER')
+        print(f'☹️ The number was {num} \nGAME OVER')
