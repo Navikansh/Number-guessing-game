@@ -7,7 +7,8 @@ def main():
    lowl, upl = user_input.input_limits()
 
    #Calculate lives
-   lives = math.log(upl - lowl + 1, 2)
+   lives = int(math.log(upl - lowl + 1, 2))
+   print(f'You have {lives} chances')
 
    #Generate num between given limits
    user_input.input_guess(lives, numGenerator.num_generator(lowl, upl))
